@@ -124,11 +124,18 @@ WSGI_APPLICATION = 'config.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         default=os.getenv('DATABASE_URL')
+#     )
+# }
+
+DATABASE_URL = os.getenv('DATABASE_URL', default='postgresql://postgres:HCQNkXkeBzuBlnOsQuLlawcxwQSYfZpP@junction.proxy.rlwy.net:18118/railway')
+
 DATABASES = {
-    'default': dj_database_url.config(
-        default=os.getenv('DATABASE_URL')
-    )
+    'default': dj_database_url.config(default=DATABASE_URL)
 }
+
 
 # DATABASES = {
 #     'default': {
