@@ -136,18 +136,17 @@ DATABASES = {
     'default': dj_database_url.config(default=DATABASE_URL)
 }
 
-
-url = urlparse(os.getenv('DATABASE_URL'))
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.getenv('db_name'),
-#         'USER': os.getenv('db_user'),
-#         'HOST': os.getenv('db_host'),
-#         'PASSWORD': os.getenv('db_password'),
-#         'PORT': os.getenv('db_port'),
-#     }
-# }
+# url = urlparse(os.getenv('DATABASE_URL'))
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.getenv('db_name'),
+        'USER': os.getenv('db_user'),
+        'HOST': os.getenv('db_host'),
+        'PASSWORD': os.getenv('db_password'),
+        'PORT': os.getenv('db_port'),
+    }
+}
 
 
 
