@@ -16,7 +16,7 @@ def welcome(request):
     return JsonResponse(
         {
             "name": "Emcent Project",
-            "url": "https://weatherapi-production-bbf2.up.railway.app/weather-api/",
+            "url": "https://weatherapi-production-bbf2.up.railway.app/swagger/",
             "message": "Welcome to my project",
             "status": 200,
         }
