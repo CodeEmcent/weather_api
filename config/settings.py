@@ -139,7 +139,7 @@ DATABASES = {
 # url = urlparse(os.getenv('DATABASE_URL'))
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.getenv('db_name'),
         'USER': os.getenv('db_user'),
         'HOST': os.getenv('db_host'),
