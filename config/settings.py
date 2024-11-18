@@ -130,14 +130,12 @@ WSGI_APPLICATION = 'config.wsgi.application'
 #     )
 # }
 
-DATABASE_URL = os.getenv('DATABASE_URL', default='postgresql://postgres:HCQNkXkeBzuBlnOsQuLlawcxwQSYfZpP@junction.proxy.rlwy.net:18118/railway')
+DATABASE_URL = os.getenv('DATABASE_URL')
 
 DATABASES = {
     'default': dj_database_url.config(default=DATABASE_URL)
 }
 
-
-url = urlparse(os.getenv('DATABASE_URL'))
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
