@@ -126,7 +126,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.getenv('DATABASE_URL', 'postgresql://postgres:HCQNkXkeBzuBlnOsQuLlawcxwQSYfZpP@postgres.railway.internal:5432/railway')
+        default=os.getenv('DATABASE_URL')
     )
 }
 
