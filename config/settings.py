@@ -126,7 +126,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.getenv('DATABASE_URL')
+        default=os.getenv('DATABASE_URL', 'postgresql://postgres:HCQNkXkeBzuBlnOsQuLlawcxwQSYfZpP@postgres.railway.internal:5432/railway')
     )
 }
 
@@ -141,18 +141,18 @@ DATABASES = {
 #     }
 # }
 
-url = urlparse(os.getenv('DATABASE_URL'))
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'HCQNkXkeBzuBlnOsQuLlawcxwQSYfZpP',
-        'HOST': 'postgres.railway.internal',
-        'PORT': '5432',
-        # 'DATABASE_URL'=postgresql://postgres:HCQNkXkeBzuBlnOsQuLlawcxwQSYfZpP@postgres.railway.internal:5432/railway
-    }
-}
+# url = urlparse(os.getenv('DATABASE_URL'))
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'railway',
+#         'USER': 'postgres',
+#         'PASSWORD': 'HCQNkXkeBzuBlnOsQuLlawcxwQSYfZpP',
+#         'HOST': 'postgres.railway.internal',
+#         'PORT': '5432',
+#         # 'DATABASE_URL'=postgresql://postgres:HCQNkXkeBzuBlnOsQuLlawcxwQSYfZpP@postgres.railway.internal:5432/railway
+#     }
+# }
 
 
 AUTH_USER_MODEL = 'accounts.User'
