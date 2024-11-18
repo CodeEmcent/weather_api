@@ -137,17 +137,16 @@ DATABASES = {
 }
 
 # url = urlparse(os.getenv('DATABASE_URL'))
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('db_name'),
-        'USER': os.getenv('db_user'),
-        'HOST': os.getenv('db_host'),
-        'PASSWORD': os.getenv('db_password'),
-        'PORT': os.getenv('db_port'),
-    }
-}
-
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.getenv('db_name'),
+#         'USER': os.getenv('db_user'),
+#         'HOST': os.getenv('db_host'),
+#         'PASSWORD': os.getenv('db_password'),
+#         'PORT': os.getenv('db_port'),
+#     }
+# }
 
 
 AUTH_USER_MODEL = 'accounts.User'
