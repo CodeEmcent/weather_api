@@ -17,7 +17,7 @@ def welcome(request):
         {
             "name": "Emcent Project",
             "url": "https://weatherapi-production-bbf2.up.railway.app/swagger/",
-            "message": "Welcome to my project",
+            "message": "Welcome to my Weather API Project",
             "status": 200,
         }
     )
@@ -25,9 +25,9 @@ def welcome(request):
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="My Documentation",
+        title="WEATHER API Documentation",
         default_version='v1',
-        description="This is the doc to my project",
+        description="This is the doc to my weather api project",
         terms_of_service="https://www.google.com/policies/terms/",
         contact=openapi.Contact(email="mcinnobezzy@gmail.com"),
         license=openapi.License(name="MIT License"),
